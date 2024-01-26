@@ -32,6 +32,10 @@ class ProfileController extends Controller
         return view('affiliate.profile.index');
     }
 
+    public function indexAdmin()
+    {
+        return view('admin.profile.index');
+    }
     
     
     /**

@@ -7,6 +7,8 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AssistsController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\RouteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +31,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
     Route::resource('products', ProductController::class);
+    Route::resource('assists', AssistsController::class);
+    Route::resource('report', ReportController::class);
+    Route::resource('route', RouteController::class);
+    Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'store'])->name('profile.store');
+
 });
 
 
@@ -50,10 +57,55 @@ All Admin Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
-    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::get('/super-admin', [HomeController::class, 'adminHome'])->name('backend.admin.index');
 
-    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('user.profile');
-    Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'store'])->name('user.profile.store');
+    Route::get('/indexAdmin', [App\Http\Controllers\ProfileController::class, 'indexAdmin'])->name('admin.user.profile');
+
+    Route::get('/asistencias', [AssistsController::class, 'index'])->name('affiliate.asistencia.index');
+
+    Route::group(['prefix' => 'role'], function () {
+        Route::get('/', [RoleController::class, 'index'])->name('backend.role.index');
+        Route::get('/create', [RoleController::class, 'create'])->name('backend.role.create');
+        Route::get('/show/{id}', [RoleController::class, 'show'])->name('backend.role.show');
+        Route::post('store', [RoleController::class, 'store'])->name('backend.role.store');
+        Route::get('edit/{id}', [RoleController::class, 'edit'])->name('backend.role.edit');
+        Route::post('update', [RoleController::class, 'update'])->name('backend.role.update');
+        Route::post('delete', [RoleController::class, 'delete'])->name('backend.role.delete');
+    });
+
+    Route::group(['prefix' => 'user'], function () {
+        Route::get('/', [UserController::class, 'index'])->name('backend.user.index');
+        Route::get('/create', [UserController::class, 'create'])->name('backend.user.create');
+        Route::get('/show/{id}', [UserController::class, 'show'])->name('backend.user.show');
+        Route::post('store', [UserController::class, 'store'])->name('backend.user.store');
+        Route::get('edit/{id}', [UserController::class, 'edit'])->name('backend.user.edit');
+        Route::post('update', [UserController::class, 'update'])->name('backend.user.update');
+        Route::post('delete', [UserController::class, 'destroy'])->name('backend.user.delete');
+    });
+
+    Route::group(['prefix' => 'report'], function () {
+        Route::get('/', [ReportController::class, 'index'])->name('backend.report.index');
+        Route::get('/create', [ReportController::class, 'create'])->name('backend.report.create');
+        Route::get('/show/{id}', [ReportController::class, 'show'])->name('backend.report.show');
+        Route::post('store', [ReportController::class, 'store'])->name('backend.report.store');
+        Route::get('edit/{id}', [ReportController::class, 'edit'])->name('backend.report.edit');
+        Route::post('update', [ReportController::class, 'update'])->name('backend.report.update');
+        Route::post('delete', [ReportController::class, 'destroy'])->name('backend.report.delete');
+    });
+
+    Route::group(['prefix' => 'route'], function () {
+        Route::get('/', [RouteController::class, 'index'])->name('backend.route.index');
+        Route::get('/create', [RouteController::class, 'create'])->name('backend.route.create');
+        Route::get('/show/{id}', [RouteController::class, 'show'])->name('backend.route.show');
+        Route::post('store', [RouteController::class, 'store'])->name('backend.route.store');
+        Route::get('edit/{id}', [RouteController::class, 'edit'])->name('backend.route.edit');
+        Route::post('update', [RouteController::class, 'update'])->name('backend.route.update');
+        Route::post('delete', [RouteController::class, 'destroy'])->name('backend.route.delete');
+    });
+
+    Route::get('/assist', [AssistsController::class, 'verAssists'])->name('backend.assist.index');
+
+
 });
 
 /*------------------------------------------
@@ -63,13 +115,9 @@ All Admin Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
-    Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+    Route::get('/afiliado', [HomeController::class, 'managerHome'])->name('manager.home');
     Route::get('/profileAffiliate', [App\Http\Controllers\ProfileController::class, 'indexAfiliate'])->name('affiliate.user.profile');
-    Route::post('/profile', [App\Http\Controllers\ProfileController::class, 'store'])->name('user.profile.store');
 
     Route::get('/asistencias', [AssistsController::class, 'index'])->name('affiliate.asistencia.index');
     Route::post('store', [AssistsController::class, 'store'])->name('affiliate.asistencia.store');
-    Route::resource('assists', AssistsController::class);
-
-
 });

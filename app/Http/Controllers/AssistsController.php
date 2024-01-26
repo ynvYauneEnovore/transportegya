@@ -15,6 +15,11 @@ class AssistsController extends Controller
         return view('affiliate.assists.index', compact('asistencias'));
     }
 
+    public function verAssists()
+    {
+        return view('admin.assists.index');
+    }
+
     // Mostrar el formulario para crear una nueva asistencia
     public function create()
     {

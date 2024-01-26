@@ -18,7 +18,7 @@
                                         <div class="card" style="padding: 5%;">
                                             <div class="card-header">{{ __('Perfil') }}</div>
                                             <div class="card-body">
-                                                <form method="POST" action="{{ route('user.profile.store') }}" enctype="multipart/form-data">
+                                                <form method="POST" action="{{ route('profile.store') }}" enctype="multipart/form-data">
                                                     @csrf
                                                     @if (session('success'))
                                                     <div class="alert alert-success" role="alert" class="text-danger">
