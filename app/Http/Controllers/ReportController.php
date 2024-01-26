@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use PDF;
 
 class ReportController extends Controller
 {
@@ -12,6 +14,21 @@ class ReportController extends Controller
     public function index()
     {
         return view('admin.reports.index');
+    }
+
+    public function generatePDF()
+    {
+        $users = User::get();
+
+        $data = [
+            'title' => 'Reporte de ususarios',
+            'date' => date('m/d/Y'),
+            'users' => $users
+        ];
+
+        $pdf = PDF::loadView('admin.reports.plantilla', $data);
+
+        return $pdf->download('itsolutionstuff.pdf');
     }
 
     /**

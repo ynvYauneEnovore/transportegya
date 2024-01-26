@@ -63,6 +63,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/asistencias', [AssistsController::class, 'index'])->name('affiliate.asistencia.index');
 
+    Route::get('/generar', [ReportController::class, 'generatePDF'])->name('generar');
+
     Route::group(['prefix' => 'role'], function () {
         Route::get('/', [RoleController::class, 'index'])->name('backend.role.index');
         Route::get('/create', [RoleController::class, 'create'])->name('backend.role.create');

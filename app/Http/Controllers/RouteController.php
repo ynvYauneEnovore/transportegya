@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Route;
 
 class RouteController extends Controller
 {
@@ -11,7 +12,9 @@ class RouteController extends Controller
      */
     public function index()
     {
-        return view('admin.routes.index');
+        $data = Route::get();
+
+        return view('admin.routes.index', compact('data'));
     }
 
     /**

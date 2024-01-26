@@ -39,7 +39,14 @@
         <h4>Reporte</h4>
     </header>
     <div class="card-body px-6 pb-3">
-      
+
+        <a href="{{ route('generar') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
+            <span class="flex items-center">
+                <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="ph:plus-bold"></iconify-icon>
+                <span>Download pdf</span>
+            </span>
+        </a>
+
     </div>
 </div>
 @endsection
