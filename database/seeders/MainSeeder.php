@@ -16,5 +16,6 @@ class MainSeeder extends Seeder
         $this->call(PermissionTableSeeder::class);
         $this->call(CreateAdminUserSeeder::class);
         $this->call(RolSeeder::class);
+        $this->call(RouteSeeder::class);
     }
 }

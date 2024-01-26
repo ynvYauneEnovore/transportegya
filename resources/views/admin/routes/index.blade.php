@@ -5,6 +5,17 @@
 @endsection
 
 @section('content')
+<style>
+    .verde {
+    color: green;
+}
+
+.rojo-inactiva {
+    color: red;
+    font-style: italic; /* Puedes agregar estilos adicionales según tus necesidades */
+}
+
+    </style>
 <div class=" md:flex justify-between items-center">
     <div class="mb-5">
         <ul class="m-0 p-0 list-none">
@@ -16,7 +27,7 @@
             </li>
             <li class="inline-block relative text-sm text-primary-500 font-Inter ">
                 <a href="{{ route('backend.role.index') }}">
-                    Roles
+                    Rutas
                     <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                 </a>
             </li>
@@ -25,10 +36,10 @@
         </ul>
     </div>
     <div class="flex flex-wrap">
-        <a href="{{ route('backend.role.create') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
+        <a href="{{ route('backend.route.create') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
             <span class="flex items-center">
                 <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="ph:plus-bold"></iconify-icon>
-                <span>Crear rol</span>
+                <span>Crear ruta</span>
             </span>
         </a>
     </div>
@@ -39,7 +50,76 @@
         <h4>Rutas</h4>
     </header>
     <div class="card-body px-6 pb-3">
-      
+        <div class="overflow-x-auto -mx-6 dashcode-data-table">
+            <span class=" col-span-8  hidden"></span>
+            <span class="  col-span-4 hidden"></span>
+            <div class="inline-block min-w-full align-middle">
+                <div class="overflow-hidden ">
+                    <table class="min-w-full divide-y divide-slate-100 table-fixed dark:divide-slate-700 data-table">
+                        <thead class=" bg-slate-200 dark:bg-slate-700">
+                            <tr>
+                                <th scope="col" class=" table-th ">
+                                    No
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Encargado
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Nombre
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Descripción
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Inicia
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Finaliza
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Estado
+                                </th>
+                                <th scope="col" class=" table-th ">
+                                    Accion
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
+                            @foreach ($data as $key => $user)
+                            <tr>
+                                <td class="table-td"> {{$key + 1}}</td>
+                                <td class="table-td ">
+                                    {{\App\Models\User::find($user->user_id)->name}}
+                                </td>
+                                <td class="table-td ">{{ $user->route_name }}</td>
+                                <td class="table-td ">{{ $user->description }}</td>
+                                <td class="table-td ">{{ $user->start_location }}</td>
+                                <td class="table-td ">{{ $user->end_location }}</td>
+                                <td class="table-td {{ $user->active ? 'verde' : 'rojo-inactiva' }}">
+                                    {{ $user->active ? 'true' : 'false' }}
+                                </td>
+
+                                <td class="table-td ">
+                                    <div class="flex space-x-3 rtl:space-x-reverse">
+                                        <a href="{{ route('backend.user.show',$user->id) }}" class="action-btn">
+                                            <iconify-icon icon="heroicons:eye"></iconify-icon>
+                                        </a>
+                                        <a href="{{ route('backend.user.edit',$user->id) }}" class="action-btn">
+                                            <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
+                                        </a>
+
+                                        {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
+                                        {!! Form::submit('✂', ['class' => 'action-btn']) !!}
+                                        {!! Form::close() !!}
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection

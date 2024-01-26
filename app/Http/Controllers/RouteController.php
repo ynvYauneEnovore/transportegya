@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Route;
+use App\Models\User;
 
 class RouteController extends Controller
 {
@@ -22,7 +23,9 @@ class RouteController extends Controller
      */
     public function create()
     {
-        //
+        $usersWithType2 = User::where('type', 2)->pluck('name', 'id');
+
+        return view('admin.routes.create', compact('usersWithType2'));
     }
 
     /**
