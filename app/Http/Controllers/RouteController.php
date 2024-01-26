@@ -33,7 +33,31 @@ class RouteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validar los datos del formulario
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'route_name' => 'required|string|max:255',
+            'description' => 'nullable|string',
+            'start_location' => 'nullable|string|max:255',
+            'end_location' => 'nullable|string|max:255',
+            'active' => 'required|boolean',
+        ]);
+
+        // Crear un nuevo modelo y asignar valores
+        $route = new Route();
+        $route->user_id = $request->input('user_id');
+        $route->route_name = $request->input('route_name');
+        $route->description = $request->input('description');
+        $route->start_location = $request->input('start_location');
+        $route->end_location = $request->input('end_location');
+        $route->active = $request->input('active');
+
+        // Guardar el modelo en la base de datos
+        $route->save();
+
+        // Redireccionar a la vista de detalles o a donde sea necesario
+        return redirect()->route('backend.route.index')
+            ->with('success', 'Ruta creada exitosamente');
     }
 
     /**
@@ -41,7 +65,8 @@ class RouteController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $route = Route::find($id);
+        return view('admin.routes.show',compact('route'));
     }
 
     /**

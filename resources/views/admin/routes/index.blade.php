@@ -101,14 +101,14 @@
 
                                 <td class="table-td ">
                                     <div class="flex space-x-3 rtl:space-x-reverse">
-                                        <a href="{{ route('backend.user.show',$user->id) }}" class="action-btn">
+                                        <a href="{{ route('backend.route.show',$user->id) }}" class="action-btn">
                                             <iconify-icon icon="heroicons:eye"></iconify-icon>
                                         </a>
                                         <a href="{{ route('backend.user.edit',$user->id) }}" class="action-btn">
                                             <iconify-icon icon="heroicons:pencil-square"></iconify-icon>
                                         </a>
 
-                                        {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
+                                        {!! Form::open(['method' => 'DELETE','route' => ['route.destroy', $user->id],'style'=>'display:inline']) !!}
                                         {!! Form::submit('✂', ['class' => 'action-btn']) !!}
                                         {!! Form::close() !!}
                                     </div>

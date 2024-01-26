@@ -48,7 +48,7 @@
         @endif
     </header>
     <div class="card-body px-6 pb-3">
-        {!! Form::open(['route' => 'roles.store', 'method' => 'POST']) !!}
+        {!! Form::open(['route' => 'route.store', 'method' => 'POST']) !!}
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">

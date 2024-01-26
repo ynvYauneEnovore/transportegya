@@ -324,7 +324,7 @@
                     <!-- Section Content Block -->
                     <div class="jos mx-auto mb-10 text-center md:mb-16 md:max-w-xl lg:mb-20 lg:max-w-3xl xl:max-w-[856px]">
                         <h2 class="font-spaceGrotesk text-4xl font-medium leading-[1.06] -tracking-[2px] text-black sm:text-[44px] lg:text-[56px] xl:text-[70px]">
-                            Get all the tools to tackle cybersecurity together
+                            Galeria de fotos
                         </h2>
                     </div>
                     <!-- Section Content Block -->
@@ -333,128 +333,33 @@
                     <ul class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.1">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-1.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Threat Detection
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                AI can identify patterns & improve the detection of unknown
-                                threats.
-                            </p>
-
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
+                            <img src="images/gal_1.jpeg" alt="icon-white-arrow-right" width="100%" class="relative left-0 transition-all duration-300" />
                         </li>
                         <!-- Service Item -->
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.2">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-2.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Phishing Detection
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                AI examines email content & sender behavior to identify
-                                phishing links.
-                            </p>
-
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
+                            <img src="images/gal_2.jpeg" alt="icon-white-arrow-right" width="100%" class="relative left-0 transition-all duration-300" />
                         </li>
                         <!-- Service Item -->
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.3">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-3.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Network Security
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                Network traffic attempts and can take automated actions to
-                                block.
-                            </p>
 
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
                         </li>
                         <!-- Service Item -->
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.4">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-4.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Encryption Tools
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                Encryption software and hardware protect data by converting
-                                it.
-                            </p>
 
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
                         </li>
                         <!-- Service Item -->
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.5">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-5.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Password Managers
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                Password managers help users create, store, & unique
-                                passwords.
-                            </p>
+                            <img src="images/gal_1.jpeg" alt="icon-white-arrow-right" width="100%" class="relative left-0 transition-all duration-300" />
 
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
                         </li>
                         <!-- Service Item -->
                         <!-- Service Item -->
                         <li class="jos group rounded-[10px] bg-colorGreen p-[30px]" data-jos_delay="0.6">
-                            <div class="mb-8 flex items-center gap-x-6">
-                                <div class="h-[50px] w-[50px]">
-                                    <img src="assets-frontend/img/th-4/icon-green-service-6.svg" alt="icon-green-service" width="50" height="50" class="h-full w-auto" />
-                                </div>
-                                <div class="flex-1 font-spaceGrotesk text-3xl leading-[1.33]">
-                                    Secure Email
-                                </div>
-                            </div>
-                            <p class="mb-7 text-[21px] leading-[1.4]">
-                                These solutions filter and block email-based threats emails,
-                                spam.
-                            </p>
 
-                            <a href="service-details.html" class="relative flex h-[30px] w-[30px] items-center justify-center overflow-hidden">
-                                <img src="assets-frontend/img/th-4/icon-white-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="relative left-0 transition-all duration-300 group-hover:left-full" />
-                                <img src="assets-frontend/img/th-4/icon-green-arrow-right.svg" alt="icon-white-arrow-right" width="30" height="30" class="absolute -left-full transition-all duration-300 group-hover:left-0" />
-                            </a>
                         </li>
                         <!-- Service Item -->
                     </ul>
@@ -499,7 +404,7 @@
                     <!-- Section Content Block -->
                     <div class="jos mx-auto mb-10 text-center md:mb-16 md:max-w-xl lg:mb-20 lg:max-w-3xl xl:max-w-[856px]">
                         <h2 class="font-spaceGrotesk text-4xl font-medium leading-[1.06] -tracking-[2px] text-black sm:text-[44px] lg:text-[56px] xl:text-[70px]">
-                            Our experts are able to answer all your questions
+                            Sobre nosotros
                         </h2>
                     </div>
                     <!-- Section Content Block -->
@@ -509,8 +414,7 @@
                         <li class="jos accordion-item is-2 rounded-[10px] bg-colorGreen px-7 py-[30px] active" data-jos_delay="0.1">
                             <div class="accordion-header mb-[10px] flex items-center justify-between text-xl leading-[1.33] -tracking-[1px] lg:text-3xl">
                                 <h5 class="font-spaceGrotesk text-white">
-                                    What is AI cybersecurity, and how does it differ from
-                                    traditional cybersecurity?
+                                    Historia
                                 </h5>
                                 <div class="accordion-icon is-outline-green">
                                     <span class="accordion-icon-plus"></span>
@@ -518,10 +422,13 @@
                             </div>
                             <div class="accordion-content">
                                 <p>
-                                    AI refers to the simulation of human intelligence in
-                                    machines, enabling them to perform tasks that typically
-                                    require human intelligence, such as learning, reasoning,
-                                    problem-solving, and decision-making.
+                                    El Sindicato de Transportistas Guayaramerín agrupa desde 2005 a los profesionales del volante en esta zona del departamento del Beni, brindando un servicio de transporte de pasajeros entre las ciudades de Guayaramerín, Riberalta y Cachuela Esperanza.
+                                    Somos una asociación conformada por 180 socios, entre choferes, auxiliares y propietarios de unidades de transporte que trabajamos con orgullo, esfuerzo y mística de servicio llevando y trayendo pasajeros por las rutas de nuestro departamento.
+                                    Conocemos profundamente la zona donde operamos y contamos con el respaldo de décadas de experiencia en el transporte de personas. Garantizamos la más alta seguridad, puntualidad y atención durante sus viajes con nosotros.
+                                    Velamos permanentemente por la calidad del servicio. Nuestras flotas reciben un mantenimiento riguroso y constante. Y nuestro personal está en capacitación continua para brindar la mejor experiencia posible a bordo.
+                                    Más que un sindicato, somos una familia. Una gran familia beniana que sigue escribiendo la historia del transporte en esta zona de Bolivia y que seguiremos recorriendo sus caminos por muchos años más.
+                                    Le invitamos a viajar con el Sindicato Guayaramerín. Confianza, seguridad y compromiso para llevarlo a su destino son nuestros valores fundamentales. Estamos para servirle.
+
                                 </p>
                             </div>
                         </li>
@@ -530,8 +437,7 @@
                         <li class="jos accordion-item is-2 rounded-[10px] bg-colorGreen px-7 py-[30px]" data-jos_delay="0.1">
                             <div class="accordion-header mb-[10px] flex items-center justify-between text-xl leading-[1.33] -tracking-[1px] lg:text-3xl">
                                 <h5 class="font-spaceGrotesk text-white">
-                                    What types of threats can AI cybersecurity protect
-                                    against?
+                                    Misión
                                 </h5>
                                 <div class="accordion-icon is-outline-green">
                                     <span class="accordion-icon-plus"></span>
@@ -539,10 +445,7 @@
                             </div>
                             <div class="accordion-content">
                                 <p>
-                                    AI refers to the simulation of human intelligence in
-                                    machines, enabling them to perform tasks that typically
-                                    require human intelligence, such as learning, reasoning,
-                                    problem-solving, and decision-making.
+                                    Nuestra misión es brindar un servicio de transporte de pasajeros eficiente, seguro y de calidad entre Guayaramerín y Riberalta. Defenderemos con compromiso los derechos de los transportistas asociados y seremos un medio para el desarrollo económico equitativo de la región.
                                 </p>
                             </div>
                         </li>
@@ -551,7 +454,7 @@
                         <li class="jos accordion-item is-2 rounded-[10px] bg-colorGreen px-7 py-[30px]" data-jos_delay="0.1">
                             <div class="accordion-header mb-[10px] flex items-center justify-between text-xl leading-[1.33] -tracking-[1px] lg:text-3xl">
                                 <h5 class="font-spaceGrotesk text-white">
-                                    How does AI help in threat detection and prevention?
+                                    Visión
                                 </h5>
                                 <div class="accordion-icon is-outline-green">
                                     <span class="accordion-icon-plus"></span>
@@ -559,55 +462,11 @@
                             </div>
                             <div class="accordion-content">
                                 <p>
-                                    AI refers to the simulation of human intelligence in
-                                    machines, enabling them to perform tasks that typically
-                                    require human intelligence, such as learning, reasoning,
-                                    problem-solving, and decision-making.
+                                    Nos vemos como pioneros en la implementación de prácticas de manejo defensivo y uso de tecnologías para optimizar el monitoreo, mantenimiento y desempeño de nuestros vehículos. Así aseguramos estar a la vanguardia en seguridad vial en la región.
                                 </p>
                             </div>
                         </li>
-                        <!-- Accordion items -->
-                        <!-- Accordion items -->
-                        <li class="jos accordion-item is-2 rounded-[10px] bg-colorGreen px-7 py-[30px]" data-jos_delay="0.1">
-                            <div class="accordion-header mb-[10px] flex items-center justify-between text-xl leading-[1.33] -tracking-[1px] lg:text-3xl">
-                                <h5 class="font-spaceGrotesk text-white">
-                                    Is AI cybersecurity effective against zero-day attacks?
-                                </h5>
-                                <div class="accordion-icon is-outline-green">
-                                    <span class="accordion-icon-plus"></span>
-                                </div>
-                            </div>
-                            <div class="accordion-content">
-                                <p>
-                                    AI refers to the simulation of human intelligence in
-                                    machines, enabling them to perform tasks that typically
-                                    require human intelligence, such as learning, reasoning,
-                                    problem-solving, and decision-making.
-                                </p>
-                            </div>
-                        </li>
-                        <!-- Accordion items -->
-                        <!-- Accordion items -->
-                        <li class="jos accordion-item is-2 rounded-[10px] bg-colorGreen px-7 py-[30px]" data-jos_delay="0.1">
-                            <div class="accordion-header mb-[10px] flex items-center justify-between text-xl leading-[1.33] -tracking-[1px] lg:text-3xl">
-                                <h5 class="font-spaceGrotesk text-white">
-                                    What is the role of human cybersecurity professionals in
-                                    AI cybersecurity?
-                                </h5>
-                                <div class="accordion-icon is-outline-green">
-                                    <span class="accordion-icon-plus"></span>
-                                </div>
-                            </div>
-                            <div class="accordion-content">
-                                <p>
-                                    AI refers to the simulation of human intelligence in
-                                    machines, enabling them to perform tasks that typically
-                                    require human intelligence, such as learning, reasoning,
-                                    problem-solving, and decision-making.
-                                </p>
-                            </div>
-                        </li>
-                        <!-- Accordion items -->
+
                     </ul>
                     <!-- Accordion-->
                 </div>
