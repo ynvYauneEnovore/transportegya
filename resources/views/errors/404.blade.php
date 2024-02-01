@@ -40,7 +40,7 @@
             <div class="text-detail">
             <h4 class="sub-title">Oops!</h4>
             <p class="detail-text">We're sorry,<br> The page you were looking for doesn't exist anymore.</p> <div class="back-btn">
-                    <a href="index.html" class="btn">Back to Home</a>
+                    <a href="/" class="btn">Back to Home</a>
                 </div>
             </div>
           </div>

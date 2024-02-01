@@ -25,27 +25,16 @@
                 </div>
             </div>
             <div class="fxt-form">
-
+          
                 <form method="POST" action="{{ route('login') }}">
                     @csrf
-
                     <div class="form-group fxt-transformY-50 fxt-transition-delay-1">
                         <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                        @error('email')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
                         <i class="flaticon-envelope"></i>
                     </div>
                     <div class="form-group fxt-transformY-50 fxt-transition-delay-2">
 
                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                        @enderror
                         <i class="flaticon-padlock"></i>
                         <a href="{{ route('password.request') }}" class="switcher-text3">Olvidaste tu contraceña</a>
                     </div>
@@ -53,12 +42,17 @@
                         <div class="fxt-content-between">
                             <button type="submit" class="fxt-btn-fill">Acceder</button>
                             <div class="checkbox">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label for="checkbox1">Recuerdamelo</label>
                             </div>
                         </div>
                     </div>
                 </form>
+                @if ($message = Session::get('success'))
+                <div class="alert alert-danger">
+                    {{ $message }}
+                </div>
+                @endif
             </div>
             <div class="fxt-footer">
                 <ul class="fxt-socials">
@@ -74,6 +68,3 @@
 </div>
 
 @endsection
-
-
-
