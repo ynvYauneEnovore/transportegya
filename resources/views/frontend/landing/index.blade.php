@@ -39,15 +39,7 @@
                                     <li class="sub-menu--item">
                                         <a href="index.html">home 01</a>
                                     </li>
-                                    <li class="sub-menu--item">
-                                        <a href="index-2.html">home 02</a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="index-3.html">home 03</a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="index-4.html"> home 04</a>
-                                    </li>
+                                   
                                 </ul>
                             </li>
 
@@ -63,89 +55,12 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item nav-item-has-children">
-                                <a href="#" class="nav-link-item drop-trigger">Politicas
-                                    <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" /></a>
-                                <ul class="sub-menu" id="submenu-3">
-                                    <li class="sub-menu--item nav-item-has-children">
-                                        <a href="#" data-menu-get="h3" class="drop-trigger">blogs
-                                            <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" /></a>
-                                        <ul class="sub-menu shape-none" id="submenu-4">
-                                            <li class="sub-menu--item">
-                                                <a href="blog.html">blogs</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="blog-details.html">blog details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu--item nav-item-has-children">
-                                        <a href="#" data-menu-get="h3" class="drop-trigger">Team
-                                            <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" />
-                                        </a>
-                                        <ul class="sub-menu shape-none" id="submenu-5">
-                                            <li class="sub-menu--item">
-                                                <a href="teams.html">Teams</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="team-details.html">Teams Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu--item nav-item-has-children">
-                                        <a href="#" data-menu-get="h3" class="drop-trigger">FAQ
-                                            <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" />
-                                        </a>
-                                        <ul class="sub-menu shape-none" id="submenu-6">
-                                            <li class="sub-menu--item">
-                                                <a href="faq.html">FAQ-1</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="faq-2.html">FAQ-2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu--item nav-item-has-children">
-                                        <a href="#" data-menu-get="h3" class="drop-trigger">Portfolio
-                                            <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" />
-                                        </a>
-                                        <ul class="sub-menu shape-none" id="submenu-7">
-                                            <li class="sub-menu--item">
-                                                <a href="portfolio.html">Portfolio</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="portfolio-details.html">Portfolio Details</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="pricing.html" data-menu-get="h3" class="drop-trigger">Pricing
-                                        </a>
-                                    </li>
-
-                                    <li class="sub-menu--item nav-item-has-children">
-                                        <a href="#" data-menu-get="h3" class="drop-trigger">Utilities
-                                            <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" />
-                                        </a>
-                                        <ul class="sub-menu shape-none" id="submenu-8">
-                                            <li class="sub-menu--item">
-                                                <a href="error-404.html">Error 404</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="">Login</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="signup.html">Signup</a>
-                                            </li>
-                                            <li class="sub-menu--item">
-                                                <a href="reset-password.html">Reset Password</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+                         
                             <li class="nav-item">
                                 <a href="contact.html" class="nav-link-item">Contactos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{ route('login') }}" class="nav-link-item">Accesos</a>
                             </li>
                         </ul>
                     </nav>
@@ -422,11 +337,11 @@
                             </div>
                             <div class="accordion-content">
                                 <p>
-                                    El Sindicato de Transportistas Guayaramerín agrupa desde 2005 a los profesionales del volante en esta zona del departamento del Beni, brindando un servicio de transporte de pasajeros entre las ciudades de Guayaramerín, Riberalta y Cachuela Esperanza.
+                                    El Sindicato de Transportistas Guayaramerín agrupa desde 2005 a los profesionales del volante en esta zona del departamento del Beni, brindando un servicio de transporte de pasajeros entre las ciudades de Guayaramerín, Riberalta y Cachuela Esperanza.<br>
                                     Somos una asociación conformada por 180 socios, entre choferes, auxiliares y propietarios de unidades de transporte que trabajamos con orgullo, esfuerzo y mística de servicio llevando y trayendo pasajeros por las rutas de nuestro departamento.
                                     Conocemos profundamente la zona donde operamos y contamos con el respaldo de décadas de experiencia en el transporte de personas. Garantizamos la más alta seguridad, puntualidad y atención durante sus viajes con nosotros.
                                     Velamos permanentemente por la calidad del servicio. Nuestras flotas reciben un mantenimiento riguroso y constante. Y nuestro personal está en capacitación continua para brindar la mejor experiencia posible a bordo.
-                                    Más que un sindicato, somos una familia. Una gran familia beniana que sigue escribiendo la historia del transporte en esta zona de Bolivia y que seguiremos recorriendo sus caminos por muchos años más.
+                                    Más que un sindicato, somos una familia. <br> Una gran familia beniana que sigue escribiendo la historia del transporte en esta zona de Bolivia y que seguiremos recorriendo sus caminos por muchos años más.
                                     Le invitamos a viajar con el Sindicato Guayaramerín. Confianza, seguridad y compromiso para llevarlo a su destino son nuestros valores fundamentales. Estamos para servirle.
 
                                 </p>

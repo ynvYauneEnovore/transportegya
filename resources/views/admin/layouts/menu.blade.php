@@ -20,6 +20,15 @@
             </li>
 
             <li class="">
+                <a href="{{ route('backend.aporte.index') }}" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="solar:money-bag-linear"></iconify-icon>
+                        <span>Aportes</span>
+                    </span>
+                </a>
+            </li>
+
+            <li class="">
                 <a href="{{ route('backend.user.index') }}" class="navItem">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="mdi:user"></iconify-icon>

@@ -9,6 +9,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AssistsController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\AporteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -104,6 +105,17 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         Route::post('update', [RouteController::class, 'update'])->name('backend.route.update');
         Route::post('delete', [RouteController::class, 'destroy'])->name('backend.route.delete');
     });
+
+    Route::group(['prefix' => 'aporte'], function () {
+        Route::get('/', [AporteController::class, 'index'])->name('backend.aporte.index');
+        Route::get('/create', [AporteController::class, 'create'])->name('backend.aporte.create');
+        Route::get('/show/{id}', [AporteController::class, 'show'])->name('backend.aporte.show');
+        Route::post('store', [AporteController::class, 'store'])->name('backend.aporte.store');
+        Route::get('edit/{id}', [AporteController::class, 'edit'])->name('backend.aporte.edit');
+        Route::post('update', [AporteController::class, 'update'])->name('backend.aporte.update');
+        Route::post('delete', [AporteController::class, 'destroy'])->name('backend.aporte.delete');
+    });
+
 
     Route::get('/assist', [AssistsController::class, 'verAssists'])->name('backend.assist.index');
 
