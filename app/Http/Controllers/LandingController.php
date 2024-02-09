@@ -14,4 +14,8 @@ class LandingController extends Controller
 
         return view('frontend.landing.index', compact('data', 'routeLive'));
     }
+
+    public function contactos(){
+        return view('frontend.landing.contactos');
+    }
 }

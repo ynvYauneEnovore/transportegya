@@ -1,7 +1,7 @@
 @extends('frontend.layouts.main')
 
 @section('head')
-<title>Iglesias</title>
+<title>Transportegya</title>
 @endsection
 
 @section('content')
@@ -30,34 +30,20 @@
                         </div>
                         <ul class="site-menu-main is-text-white">
                             <li class="nav-item">
-                                <a href="about.html" class="nav-link-item">Inicio</a>
+                                <a href="{{ route('backend.landing.index') }}" class="nav-link-item">Inicio</a>
                             </li>
                             <li class="nav-item nav-item-has-children">
                                 <a href="#" class="nav-link-item drop-trigger">Servicios
                                     <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" /></a>
                                 <ul class="sub-menu" id="submenu-1">
                                     <li class="sub-menu--item">
-                                        <a href="index.html">home 01</a>
+                                        <a href="index.html">Rutas en vivo</a>
                                     </li>
 
                                 </ul>
                             </li>
-
-                            <li class="nav-item nav-item-has-children">
-                                <a href="#" class="nav-link-item drop-trigger">Nosotros
-                                    <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" /></a>
-                                <ul class="sub-menu" id="submenu-2">
-                                    <li class="sub-menu--item">
-                                        <a href="services.html">Services</a>
-                                    </li>
-                                    <li class="sub-menu--item">
-                                        <a href="service-details.html">Service Details</a>
-                                    </li>
-                                </ul>
-                            </li>
-
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link-item">Contactos</a>
+                                <a href="{{ route('backend.contactos.index') }}" class="nav-link-item">Contactos</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('login') }}" class="nav-link-item">Accesos</a>
