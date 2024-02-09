@@ -10,6 +10,8 @@ use App\Http\Controllers\AssistsController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\AporteController;
+use App\Http\Controllers\CargoController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +24,8 @@ use App\Http\Controllers\AporteController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.landing.index');
-});
+Route::get('/', [LandingController::class, 'index'])->name('backend.landing.index');
+
 
 Auth::routes();
 
@@ -115,6 +116,18 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         Route::post('update', [AporteController::class, 'update'])->name('backend.aporte.update');
         Route::post('delete', [AporteController::class, 'destroy'])->name('backend.aporte.delete');
     });
+
+
+    Route::group(['prefix' => 'cargo'], function () {
+        Route::get('/', [CargoController::class, 'index'])->name('backend.cargo.index');
+        Route::get('/create', [CargoController::class, 'create'])->name('backend.cargo.create');
+        Route::get('/show/{id}', [CargoController::class, 'show'])->name('backend.cargo.show');
+        Route::post('store', [CargoController::class, 'store'])->name('backend.cargo.store');
+        Route::get('edit/{id}', [CargoController::class, 'edit'])->name('backend.cargo.edit');
+        Route::post('update', [CargoController::class, 'update'])->name('backend.cargo.update');
+        Route::post('delete', [CargoController::class, 'destroy'])->name('backend.cargo.delete');
+    });
+
 
 
     Route::get('/assist', [AssistsController::class, 'verAssists'])->name('backend.assist.index');

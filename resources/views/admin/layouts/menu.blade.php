@@ -65,6 +65,26 @@
             </li>
 
             <li class="">
+                <a href="{{ route('backend.cargo.index') }}" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="fa:users"></iconify-icon>
+                        
+                        <span>Directorio</span>
+                    </span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="{{ route('backend.route.index') }}" class="navItem">
+                    <span class="flex items-center">
+                        <iconify-icon class="nav-icon" icon="mingcute:pig-money-fill"></iconify-icon>
+                        
+                        <span>Caja chica</span>
+                    </span>
+                </a>
+            </li>
+
+            <li class="">
                 <a href="{{ route('backend.report.index') }}" class="navItem">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="bxs:report"></iconify-icon>

@@ -39,7 +39,7 @@
                                     <li class="sub-menu--item">
                                         <a href="index.html">home 01</a>
                                     </li>
-                                   
+
                                 </ul>
                             </li>
 
@@ -55,7 +55,7 @@
                                     </li>
                                 </ul>
                             </li>
-                         
+
                             <li class="nav-item">
                                 <a href="contact.html" class="nav-link-item">Contactos</a>
                             </li>
@@ -390,6 +390,79 @@
             <!-- Section Spacer -->
         </section>
         <!--...::: FAQ Section End :::... -->
+
+        <!--...::: Testimonial Section Start :::... -->
+        <section id="testimonial-section">
+            <!-- Section Spacer -->
+            <div class="py-20 xl:py-[130px]">
+                <!-- Section Container -->
+                <div class="global-container">
+                    <!-- Section Content Block -->
+                    <div class="jos mx-auto mb-10 text-center md:mb-16 md:max-w-xl lg:mb-20 lg:max-w-3xl xl:max-w-[856px]">
+                        <h2 class="font-clashDisplay text-4xl font-medium leading-[1.06] sm:text-[44px] lg:text-[56px] xl:text-[75px]">
+                            DIRECTORIO
+                        </h2>
+                    </div>
+                    <!-- Section Content Block -->
+
+                    <!-- Testimonial Carousel -->
+                    <!-- Slider main container -->
+                    <div class="jos swiper testimonial-slider relative z-[1]">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            @foreach ($data as $key => $user)
+
+                            <div class="swiper-slide">
+                                <div class="flex flex-col gap-x-16 md:flex-row lg:gap-x-28 items-center xxl:items-baseline xl:gap-x-[134px]">
+                                    <div class="h-auto w-[300px] self-center overflow-hidden rounded-[10px] lg:w-[375px] xl:h-[494px] xl:w-[526px]">
+                                        <img src="{{\App\Models\User::find($user->user_id)->avatar}}" alt="testimonial-img-1" width="526" height="494" class="h-full w-full object-cover" loading="lazy" />
+                                    </div>
+                                    <div class="mt-[30px] flex-1 text-center md:text-left">
+                                        <div class="mb-5 font-clashDisplay text-2xl font-medium leading-[1.28] tracking-[1px] lg:mb-9 lg:text-[28px]">
+                                            “Easy to use AI Chatbot with many options”
+                                        </div>
+                                        <p class="mb-9 leading-[1.33] lg:mb-[50px] lg:text-lg xl:text-2xl">
+                                            I have been using AI chatbots for several chatbots for
+                                            the past year. I learned quickly and exploring the
+                                            tool, & asking questions to Slack support. The tool is
+                                            very easy user-friendly and the support group helps
+                                            quickly and thoroughly. Keep up the good work!
+                                        </p>
+
+                                        <div class="text-[21px] font-semibold leading-[1.42]">
+                                            -{{\App\Models\User::find($user->user_id)->name}}
+                                            <span class="mt-1 block text-lg font-normal leading-[1.66]">Professional
+                                                blog writer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            @endforeach
+
+                        </div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="testimonial-nav">
+                            <div class="testimonial-nav-prev testimonial-nav-dir">
+                                <img src="assets-frontend/img/th-2/icon-black-long-arrow-left.svg" alt="icon-black-long-arrow-left" width="24" height="24" />
+                                <img src="assets-frontend/img/th-2/icon-white-long-arrow-left.svg" alt="icon-white-long-arrow-left" width="24" height="24" />
+                            </div>
+                            <div class="testimonial-nav-next testimonial-nav-dir">
+                                <img src="assets-frontend/img/th-2/icon-black-long-arrow-right.svg" alt="icon-black-long-arrow-right" width="24" height="24" />
+                                <img src="assets-frontend/img/th-2/icon-white-long-arrow-right.svg" alt="icon-white-long-arrow-right" width="24" height="24" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Carousel -->
+                </div>
+                <!-- Section Container -->
+            </div>
+            <!-- Section Spacer -->
+        </section>
+        <!--...::: Testimonial Section Start :::... -->
+
+
 
         <!--...::: Testimonial Section Start :::... -->
         <section id="testimonial-section">
