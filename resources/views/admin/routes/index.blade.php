@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="inline-block relative text-sm text-primary-500 font-Inter ">
-                <a href="{{ route('backend.role.index') }}">
+                <a href="{{ route('backend.route.index') }}">
                     Rutas
                     <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                 </a>

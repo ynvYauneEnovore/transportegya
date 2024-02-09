@@ -1,4 +1,5 @@
 <div class="sidebar-wrapper group">
+    
     <div id="bodyOverlay" class="w-screen h-screen fixed top-0 bg-slate-900 bg-opacity-50 backdrop-blur-sm z-10 hidden"></div>
     <div class="logo-segment">
         <a class="flex items-center" href="{{ route('backend.admin.index') }}">
@@ -11,7 +12,7 @@
         <ul class="sidebar-menu">
             <li class="sidebar-menu-title">MENU</li>
             <li class="">
-                <a href="{{ route('backend.admin.index') }}" class="navItem">
+                <a href="{{ route('backend.admin.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.admin.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="heroicons-outline:home"></iconify-icon>
                         <span>Inicio</span>
@@ -20,7 +21,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.aporte.index') }}" class="navItem">
+                <a href="{{ route('backend.aporte.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.aporte.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="solar:money-bag-linear"></iconify-icon>
                         <span>Aportes</span>
@@ -29,7 +30,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.user.index') }}" class="navItem">
+                <a href="{{ route('backend.user.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.user.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="mdi:user"></iconify-icon>
                         <span>Usuarios</span>
@@ -38,7 +39,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.assist.index') }}" class="navItem">
+                <a href="{{ route('backend.assist.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.assist.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="heroicons-outline:clipboard-check"></iconify-icon>
                         <span>Asistencia</span>
@@ -47,7 +48,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.role.index') }}" class="navItem">
+                <a href="{{ route('backend.role.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.role.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="carbon:subnet-acl-rules"></iconify-icon>
                         <span>ACL</span>
@@ -56,7 +57,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.route.index') }}" class="navItem">
+                <a href="{{ route('backend.route.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.route.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="fa6-solid:route"></iconify-icon>
                         <span>Rutas</span>
@@ -65,7 +66,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.cargo.index') }}" class="navItem">
+                <a href="{{ route('backend.cargo.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.cargo.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="fa:users"></iconify-icon>
                         
@@ -75,7 +76,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.route.index') }}" class="navItem">
+                <a href="{{ route('backend.route.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.route.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="mingcute:pig-money-fill"></iconify-icon>
                         
@@ -85,7 +86,7 @@
             </li>
 
             <li class="">
-                <a href="{{ route('backend.report.index') }}" class="navItem">
+                <a href="{{ route('backend.report.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.report.index') ? 'active' : '' }}">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="bxs:report"></iconify-icon>
                         <span>Reportes</span>

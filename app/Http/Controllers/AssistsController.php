@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Assist;
+use App\Models\Route;
+use App\Models\RouteLive;
 use Illuminate\Http\RedirectResponse;
 
 class AssistsController extends Controller
@@ -12,7 +14,9 @@ class AssistsController extends Controller
     public function index()
     {
         $asistencias = Assist::get();
-        return view('affiliate.assists.index', compact('asistencias'));
+        $afiliados = Route::pluck('description', 'id');
+
+        return view('affiliate.assists.index', compact('asistencias', 'afiliados'));
     }
 
     public function verAssists()
@@ -38,11 +42,21 @@ class AssistsController extends Controller
 
         // Crea una nueva instancia de Asistencia y guarda en la base de datos
         Assist::create([
-            'user_id' => auth()->user()->id, // O asigna el usuario correspondiente
+            'user_id' => auth()->user()->id, 
             'fecha' => $request->input('fecha'),
             'hora_entrada' => $request->input('hora_entrada'),
             'hora_salida' => $request->input('hora_salida'),
         ]);
+
+        $lastAssistId = Assist::orderBy('id', 'desc')->first()->id;
+
+
+        RouteLive::create([
+            'user_id' => auth()->user()->id, 
+            'route_id' => $request->input('route_id'),
+            'assists_id' => $lastAssistId,
+        ]);
+
 
         return redirect()->route('assists.index')->with('success', 'Asistencia registrada exitosamente.');
     }

@@ -121,11 +121,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::group(['prefix' => 'cargo'], function () {
         Route::get('/', [CargoController::class, 'index'])->name('backend.cargo.index');
         Route::get('/create', [CargoController::class, 'create'])->name('backend.cargo.create');
-        Route::get('/show/{id}', [CargoController::class, 'show'])->name('backend.cargo.show');
         Route::post('store', [CargoController::class, 'store'])->name('backend.cargo.store');
-        Route::get('edit/{id}', [CargoController::class, 'edit'])->name('backend.cargo.edit');
-        Route::post('update', [CargoController::class, 'update'])->name('backend.cargo.update');
-        Route::post('delete', [CargoController::class, 'destroy'])->name('backend.cargo.delete');
+        Route::delete('delete/{id}', [CargoController::class, 'destroy'])->name('backend.cargo.delete');
     });
 
 

@@ -17,8 +17,8 @@
                 </a>
             </li>
             <li class="inline-block relative text-sm text-primary-500 font-Inter ">
-                <a href="{{ route('backend.role.index') }}">
-                    Aportes
+                <a href="{{ route('backend.cargo.index') }}">
+                    Cargos
                     <iconify-icon icon="heroicons-outline:chevron-right" class="relative top-[3px] text-slate-500 rtl:rotate-180"></iconify-icon>
                 </a>
             </li>
@@ -30,7 +30,7 @@
         <a href="{{ route('backend.cargo.create') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
             <span class="flex items-center">
                 <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="ph:plus-bold"></iconify-icon>
-                <span>Crear aporte</span>
+                <span>Crear directivo</span>
             </span>
         </a>
     </div>
@@ -38,7 +38,12 @@
 
 <div class="card">
     <header class=" card-header noborder">
-        <h4>Aportes de los afiliados</h4>
+        <h4>Adminitración de la mesa directiva</h4>
+        @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+      {{ $message }}
+    </div>
+    @endif
     </header>
     <div class="card-body px-6 pb-3">
         <div class="overflow-x-auto -mx-6 dashcode-data-table">
@@ -61,11 +66,13 @@
                                 <th scope="col" class=" table-th ">
                                     Descripción
                                 </th>
-                               
+                                <th scope="col" class=" table-th ">
+                                    Acción
+                                </th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-slate-100 dark:bg-slate-800 dark:divide-slate-700">
-                        @foreach ($data as $key => $user)
+                            @foreach ($data as $key => $user)
                             <tr>
                                 <td class="table-td"> {{$key + 1}}</td>
                                 <td class="table-td ">
@@ -73,6 +80,18 @@
                                 </td>
                                 <td class="table-td ">{{ $user->nombre }}</td>
                                 <td class="table-td ">{{ $user->descripcion }}</td>
+
+                                <td class="table-td ">
+                                    <div class="flex space-x-3 rtl:space-x-reverse">
+                                        <form method="POST" action="{{ route('backend.cargo.delete', $user->id) }}" style="display:inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="action-btn">✂</button>
+                                        </form>
+
+
+                                    </div>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

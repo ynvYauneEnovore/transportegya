@@ -25,7 +25,7 @@
         </ul>
     </div>
     <div class="flex flex-wrap ">
-        <a href="{{ route('backend.route.index') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
+        <a href="{{ route('backend.cargo.index') }}" class="btn inline-flex justify-center btn-dark dark:bg-slate-700 dark:text-slate-300 m-1">
             <span class="flex items-center">
                 <iconify-icon class="text-xl ltr:mr-2 rtl:ml-2" icon="pajamas:go-back"></iconify-icon>
                 <span>Atras</span>
@@ -35,7 +35,7 @@
 </div>
 <div class="card">
     <header class=" card-header noborder">
-        <h4>Rutas</h4>
+        <h4>Crear un miembre del directorio</h4>
         @if (count($errors) > 0)
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -58,7 +58,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 mt-6">
             <div class="form-group">
-                <strong>Nombre:</strong>
+                <strong>Nombre del cargo:</strong>
                 {!! Form::text('nombre', null, ['placeholder' => 'Nombre', 'class' => 'form-control']) !!}
             </div>
         </div>

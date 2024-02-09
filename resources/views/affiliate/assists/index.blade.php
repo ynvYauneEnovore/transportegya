@@ -26,13 +26,18 @@
                                         <input type="hidden" name="fecha" value="{{ now()->toDateString() }}">
 
                                         <div class="mb-3">
-                                            <label for="hora_entrada" class="form-label">Hora de Entrada:</label>
+                                            <label for="hora_entrada" class="form-label">Hora de salida:</label>
                                             <input type="time" class="form-control" id="hora_entrada" name="hora_entrada" required>
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="hora_salida" class="form-label">Hora de Salida:</label>
+                                            <label for="hora_salida" class="form-label">Hora de llegada:</label>
                                             <input type="time" class="form-control" id="hora_salida" name="hora_salida" required>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="hora_salida" class="form-label">Afiliado:</label>
+                                            {!! Form::select('route_id', $afiliados, null, ['class' => 'select2 form-control w-full mt-2 py-2']) !!}
                                         </div>
 
                                         <button type="submit" class="btn btn-primary">Registrar Asistencia</button>

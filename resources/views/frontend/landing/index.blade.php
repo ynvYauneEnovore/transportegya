@@ -486,229 +486,49 @@
                 <!-- Testimonial List -->
                 <div class="horizontal-slide-from-right-to-left grid w-[200%] grid-flow-col gap-6">
                     <!-- Testimonial Item -->
+                    @foreach ($routeLive as $key => $user)
+
                     <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
+                        <!-- <div class="block">
                             <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
+                        </div> -->
                         <p>
-                            “This AI SaaS tool has revolutionized the way we process and
-                            analyze data. This is a game-changer for our business.”
+                            {{\App\Models\Route::find($user->route_id)->description}}
                         </p>
                         <div class="flex items-center gap-x-4">
                             <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-1.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
+                                <img src="{{\App\Models\User::find($user->user_id)->avatar}}" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
                             </div>
                             <div class="flex flex-col gap-y-1">
                                 <span class="block text-lg font-semibold leading-[1.6]">
-                                    Max Weber
+                                    {{\App\Models\User::find($user->user_id)->name}}
                                 </span>
                                 <span class="block text-sm font-light leading-[1.4]">
-                                    HR Manager
+                                    {{\App\Models\Assist::find($user->assists_id)->hora_entrada}}
+                                </span>
+                                <span class="block text-sm font-light leading-[1.4]">
+                                    {{\App\Models\Assist::find($user->assists_id)->hora_salida}}
                                 </span>
                             </div>
                         </div>
                     </div>
+                    @endforeach
+
                     <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "It answers immediately, and we've seen a significant
-                            reduction in response time. Our customers love it and so do
-                            we!"
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-2.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Douglas Smith
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Businessman
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "It is accurate, fast and supports multiple languages support.
-                            It is a must for any international business success."
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-3.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Abraham Maslo
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Founder @ Marketing Company
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "Security is a top concern for us, and AI SaaS takes it
-                            seriously. It's a reassuring layer of protection for our
-                            organization."
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-4.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Jack Fayol
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    HR Manager
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "We were concerned about integrating their APIs were well
-                            documented, and their support team was super cool."
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-5.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Karen Lynn
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Software Engineer
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "The return on investment has exceeded our expectations. it's
-                            an investment in the future of our business."
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-6.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Henry Ochi
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Bank Manager
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            “This AI SaaS tool has revolutionized the way we process and
-                            analyze data. This is a game-changer for our business.”
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-1.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Max Weber
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    HR Manager
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "It answers immediately, and we've seen a significant
-                            reduction in response time. Our customers love it and so do
-                            we!"
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-2.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Douglas Smith
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Businessman
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
-                    <!-- Testimonial Item -->
-                    <div class="flex w-[415px] flex-col gap-y-8 rounded-[10px] border-[1px] border-colorCodGray p-[30px] text-black">
-                        <div class="block">
-                            <img src="assets-frontend/img/th-4/icon-green-rating.svg" alt="rating" width="146" height="25" />
-                        </div>
-                        <p>
-                            "It is accurate, fast and supports multiple languages support.
-                            It is a must for any international business success."
-                        </p>
-                        <div class="flex items-center gap-x-4">
-                            <div class="h-[60px] w-[60px] overflow-hidden rounded-full">
-                                <img src="assets-frontend/img/th-1/testimonial-img-3.jpg" alt="testimonial-img" width="60" height="60" class="h-full w-full object-cover object-center" />
-                            </div>
-                            <div class="flex flex-col gap-y-1">
-                                <span class="block text-lg font-semibold leading-[1.6]">
-                                    Abraham Maslo
-                                </span>
-                                <span class="block text-sm font-light leading-[1.4]">
-                                    Founder @ Marketing Company
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial Item -->
+
+
+
+
                 </div>
-                <!-- Testimonial List -->
+
+
             </div>
-        </section>
-        <!--...::: Testimonial Section End :::... -->
-    </main>
+            <!-- Testimonial List -->
+</div>
+</section>
+
+
+<!--...::: Testimonial Section End :::... -->
+</main>
 </div>
 @endsection
