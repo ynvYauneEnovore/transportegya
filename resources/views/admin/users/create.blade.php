@@ -51,36 +51,45 @@
     <div class="card-body px-6 pb-6">
         {!! Form::open(array('route' => 'users.store','method'=>'POST')) !!}
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
                 <div class="form-group">
                     <strong>Name:</strong>
                     {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
                 <div class="form-group">
                     <strong>Email:</strong>
                     {!! Form::text('email', null, array('placeholder' => 'Email','class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
                 <div class="form-group">
                     <strong>Password:</strong>
                     {!! Form::password('password', array('placeholder' => 'Password','class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
                 <div class="form-group">
                     <strong>Confirm Password:</strong>
                     {!! Form::password('confirm-password', array('placeholder' => 'Confirm Password','class' => 'form-control')) !!}
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
                 <div class="form-group">
                     <strong>Role:</strong>
                     {!! Form::select('roles[]', $roles,[], array('class' => 'form-control','multiple')) !!}
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-5">
+                <div class="form-group">
+                    <strong>Tipo:</strong>
+                    {!! Form::select('type', ['0' => 'Invitado', '1' => 'Admin', '2' => 'Afiliado'], null, ['placeholder' => 'Seleccione el tipo de usuario', 'class' => 'form-control']) !!}
+                </div>
+            </div>
+
+
             <div class="col-xs-12 col-sm-12 col-md-12 text-center mt-5">
                 <button type="submit" class="btn btn-primary">Crear</button>
             </div>
