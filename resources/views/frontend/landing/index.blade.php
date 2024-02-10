@@ -406,20 +406,20 @@
                                     </div>
                                     <div class="mt-[30px] flex-1 text-center md:text-left">
                                         <div class="mb-5 font-clashDisplay text-2xl font-medium leading-[1.28] tracking-[1px] lg:mb-9 lg:text-[28px]">
-                                            “Easy to use AI Chatbot with many options”
+                                            “{{ $user->descripcion }}”
                                         </div>
                                         <p class="mb-9 leading-[1.33] lg:mb-[50px] lg:text-lg xl:text-2xl">
-                                            I have been using AI chatbots for several chatbots for
-                                            the past year. I learned quickly and exploring the
-                                            tool, & asking questions to Slack support. The tool is
-                                            very easy user-friendly and the support group helps
-                                            quickly and thoroughly. Keep up the good work!
+                                        {{\App\Models\User::find($user->user_id)->email}}
                                         </p>
-
+                                        <p class="mb-9 leading-[1.33] lg:mb-[50px] lg:text-lg xl:text-2xl">
+                                        {{\App\Models\User::find($user->user_id)->phone}}
+                                        </p>
+                                        <p class="mb-9 leading-[1.33] lg:mb-[50px] lg:text-lg xl:text-2xl">
+                                        {{\App\Models\User::find($user->user_id)->city}}
+                                        </p>
                                         <div class="text-[21px] font-semibold leading-[1.42]">
                                             -{{\App\Models\User::find($user->user_id)->name}}
-                                            <span class="mt-1 block text-lg font-normal leading-[1.66]">Professional
-                                                blog writer</span>
+                                            <span class="mt-1 block text-lg font-normal leading-[1.66]">{{ $user->nombre }}</span>
                                         </div>
                                     </div>
                                 </div>

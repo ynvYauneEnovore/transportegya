@@ -75,15 +75,7 @@
                 </a>
             </li>
 
-            <li class="">
-                <a href="{{ route('backend.route.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.route.index') ? 'active' : '' }}">
-                    <span class="flex items-center">
-                        <iconify-icon class="nav-icon" icon="mingcute:pig-money-fill"></iconify-icon>
-                        
-                        <span>Caja chica</span>
-                    </span>
-                </a>
-            </li>
+
 
             <li class="">
                 <a href="{{ route('backend.report.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.report.index') ? 'active' : '' }}">
