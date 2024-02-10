@@ -26,6 +26,8 @@ use App\Http\Controllers\LandingController;
 
 Route::get('/', [LandingController::class, 'index'])->name('backend.landing.index');
 Route::get('/contactos', [LandingController::class, 'contactos'])->name('backend.contactos.index');
+Route::get('/rutas', [LandingController::class, 'rutas'])->name('backend.rutas.index');
+
 
 
 Auth::routes();

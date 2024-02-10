@@ -12,7 +12,7 @@
         <div class="global-container">
             <div class="flex items-center justify-between gap-x-8">
                 <!-- Header Logo -->
-                <a href="index.html" class="">
+                <a href="{{ route('backend.landing.index') }}" class="">
                     <img src="images/grug.svg" alt="AIMass" width="96" height="24" />
                 </a>
                 <!-- Header Logo -->
@@ -37,7 +37,7 @@
                                     <img class="dropdown-icon" src="assets-frontend/img/icon-black-cheveron-right.svg" alt="cheveron-right" width="16" height="16" /></a>
                                 <ul class="sub-menu" id="submenu-1">
                                     <li class="sub-menu--item">
-                                        <a href="index.html">Rutas en vivo</a>
+                                        <a href="{{ route('backend.rutas.index') }}">Rutas en vivo</a>
                                     </li>
 
                                 </ul>

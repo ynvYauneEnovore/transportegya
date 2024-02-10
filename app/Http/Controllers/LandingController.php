@@ -18,4 +18,9 @@ class LandingController extends Controller
     public function contactos(){
         return view('frontend.landing.contactos');
     }
+
+    public function rutas(){
+        $routeLive = RouteLive::get();
+        return view('frontend.landing.rutas', compact('routeLive'));
+    }
 }

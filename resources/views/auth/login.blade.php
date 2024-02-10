@@ -9,7 +9,7 @@
 
 <div id="wrapper" class="wrapper">
     <div class="fxt-template-animation fxt-template-layout5">
-        <div class="fxt-bg-img fxt-none-767" data-bg-image="assets-login/img/figure/bg5-l.jpg">
+        <div class="fxt-bg-img fxt-none-767" data-bg-image="images/1.jpeg">
             <div class="fxt-intro">
                 <div class="sub-title">Bienvenido</div>
                 <h1>Adminitración transportegya</h1>
@@ -21,7 +21,6 @@
                 <a href="/" class="fxt-logo"><img src="{{ asset('images/logo.png') }}" alt="Logo" width="100px;"></a>
                 <div class="fxt-page-switcher">
                     <a href="login-5.html" class="switcher-text switcher-text1 active">LogIn</a>
-                    <a href="register-5.html" class="switcher-text switcher-text2" disabled>Register</a>
                 </div>
             </div>
             <div class="fxt-form">
