@@ -4,3 +4,5 @@
  <script src="{{ asset('assets-frontend/js/vendors/jos.min.js') }}"></script>
  <script src="{{ asset('assets-frontend/js/vendors/menu.js') }}"></script>
  <script src="{{ asset('assets-frontend/js/main.js') }}"></script>
+
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

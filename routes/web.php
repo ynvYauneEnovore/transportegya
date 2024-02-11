@@ -12,6 +12,8 @@ use App\Http\Controllers\RouteController;
 use App\Http\Controllers\AporteController;
 use App\Http\Controllers\CargoController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\MensajeController;
+use App\Http\Controllers\EmpresaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +29,7 @@ use App\Http\Controllers\LandingController;
 Route::get('/', [LandingController::class, 'index'])->name('backend.landing.index');
 Route::get('/contactos', [LandingController::class, 'contactos'])->name('backend.contactos.index');
 Route::get('/rutas', [LandingController::class, 'rutas'])->name('backend.rutas.index');
+Route::post('/guardar-mensaje', [MensajeController::class, 'store'])->name('guardar_mensaje');
 
 
 
@@ -126,6 +129,16 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         Route::get('/create', [CargoController::class, 'create'])->name('backend.cargo.create');
         Route::post('store', [CargoController::class, 'store'])->name('backend.cargo.store');
         Route::delete('delete/{id}', [CargoController::class, 'destroy'])->name('backend.cargo.delete');
+    });
+
+    Route::group(['prefix' => 'mensaje'], function () {
+        Route::get('/', [MensajeController::class, 'index'])->name('backend.mensaje.index');
+        Route::delete('delete/{id}', [MensajeController::class, 'destroy'])->name('backend.mensaje.delete');
+    });
+
+    Route::group(['prefix' => 'empresa'], function () {
+        Route::get('/', [EmpresaController::class, 'index'])->name('backend.empresa.index');
+        Route::delete('delete/{id}', [EmpresaController::class, 'destroy'])->name('backend.empresa.delete');
     });
 
 

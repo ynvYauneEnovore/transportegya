@@ -76,7 +76,7 @@
                 </a>
             </li>
             <li class="">
-                <a href="{{ route('backend.report.index') }}" class="navItem">
+                <a href="{{ route('backend.mensaje.index') }}" class="navItem">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="icon-park-outline:message-unread"></iconify-icon>
                         <span>Mensajes</span>
@@ -84,7 +84,7 @@
                 </a>
             </li>
               <li class="">
-                <a href="{{ route('backend.report.index') }}" class="navItem">
+                <a href="{{ route('backend.empresa.index') }}" class="navItem">
                     <span class="flex items-center">
                         <iconify-icon class="nav-icon" icon="streamline:business-profession-home-office"></iconify-icon>
                         <span>Empresa</span>

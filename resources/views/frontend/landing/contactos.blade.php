@@ -5,7 +5,34 @@
 @endsection
 
 @section('content')
+<style>
+.top-bar-success {
+    background-color: #4CAF50; /* Verde */
+    width: 100%; /* Ancho completo */
+    height: 50px; /* Altura deseada */
+    position: fixed; /* Fijar en la parte superior */
+    top: 0; /* Desde la parte superior */
+    left: 0; /* Desde la izquierda */
+    z-index: 9999; /* Colocarlo por encima de otros elementos */
+    animation: fadeOut 10s forwards; /* Animación de desvanecimiento */
+}
 
+.alert {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Comienza completamente visible */
+    }
+    100% {
+        opacity: 0; /* Termina completamente transparente */
+    }
+}
+
+    </style>
 <div class="page-wrapper relative z-[1] text-black">
     <!--...::: Header Start :::... -->
     <header class="site-header site-header--absolute is--white py-3" id="sticky-menu">
@@ -120,11 +147,11 @@
 
                                 <ul class="mt-12 flex flex-col gap-y-8 lg:gap-y-12">
                                     <li class="flex flex-col gap-y-4 text-2xl font-bold">
-                                        Send us an email:
+                                        Envianos un email:
                                         <a href="mailto:yourmail@email.com" class="text-2xl font-normal leading-loose hover:text-colorOrangyRed lg:text-3xl">info@mthemeus.com</a>
                                     </li>
                                     <li class="flex flex-col gap-y-4 text-2xl font-bold">
-                                        Give us a call:
+                                        Llamanos:
                                         <a href="tel:+0123456789" class="text-2xl font-normal leading-loose hover:text-colorOrangyRed lg:text-3xl">+(012)
                                             345 6789</a>
                                     </li>
@@ -165,60 +192,63 @@
                         <!-- Contact Right Block -->
                         <div class="order-1 block rounded-lg bg-white px-[30px] py-[50px] shadow-[0_4px_60px_0_rgba(0,0,0,0.1)] md:order-2">
                             <!-- Contact Form -->
-                            <form action="https://formspree.io/f/mlqvzkyx" method="post" class="flex flex-col gap-y-5">
-                                <!-- Form Group -->
-                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                                    <!-- Form Single Input -->
-                                    <div class="flex flex-col gap-y-[10px]">
-                                        <label for="contact-name" class="text-lg font-bold leading-[1.6]">Enter your
-                                            name</label>
-                                        <input type="text" name="contact-name" id="contact-name" placeholder="Adam Smith" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
-                                    </div>
-                                    <!-- Form Single Input -->
-                                    <!-- Form Single Input -->
-                                    <div class="flex flex-col gap-y-[10px]">
-                                        <label for="contact-email" class="text-lg font-bold leading-[1.6]">Email
-                                            address</label>
-                                        <input type="email" name="contact-email" id="contact-email" placeholder="example@gmail.com" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
-                                    </div>
-                                    <!-- Form Single Input -->
+
+                            @if ($message = Session::get('success'))
+                            <div class="top-bar-success">
+                                <div class="alert alert-success">
+                                    {{ $message }}
                                 </div>
-                                <!-- Form Group -->
-                                <!-- Form Group -->
+                            </div>
+                            @endif
+
+                            <form action="{{ route('guardar_mensaje') }}" method="post" class="flex flex-col gap-y-5">
+                                @csrf
+                                <!-- Grupo de Formulario -->
                                 <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
-                                    <!-- Form Single Input -->
+                                    <!-- Entrada de Formulario Individual -->
                                     <div class="flex flex-col gap-y-[10px]">
-                                        <label for="contact-phone" class="text-lg font-bold leading-[1.6]">Phone
-                                            number</label>
-                                        <input type="tel" name="contact-phone" id="contact-phone" placeholder="(123) 456 - 7890" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
+                                        <label for="contact-name" class="text-lg font-bold leading-[1.6]">Ingrese su nombre</label>
+                                        <input type="text" name="nombre" id="contact-name" placeholder="Juan Pérez" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
                                     </div>
-                                    <!-- Form Single Input -->
-                                    <!-- Form Single Input -->
+                                    <!-- Entrada de Formulario Individual -->
                                     <div class="flex flex-col gap-y-[10px]">
-                                        <label for="contact-company" class="text-lg font-bold leading-[1.6]">Company</label>
-                                        <input type="text" name="contact-company" id="contact-company" placeholder="EX Facebook" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
+                                        <label for="contact-email" class="text-lg font-bold leading-[1.6]">Correo electrónico</label>
+                                        <input type="email" name="email" id="contact-email" placeholder="ejemplo@gmail.com" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
                                     </div>
-                                    <!-- Form Single Input -->
                                 </div>
-                                <!-- Form Group -->
-                                <!-- Form Group -->
+                                <!-- Grupo de Formulario -->
+                                <!-- Grupo de Formulario -->
+                                <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                                    <!-- Entrada de Formulario Individual -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="contact-phone" class="text-lg font-bold leading-[1.6]">Número de teléfono</label>
+                                        <input type="tel" name="numero" id="contact-phone" placeholder="(123) 456 - 7890" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
+                                    </div>
+                                    <!-- Entrada de Formulario Individual -->
+                                    <div class="flex flex-col gap-y-[10px]">
+                                        <label for="contact-company" class="text-lg font-bold leading-[1.6]">Empresa</label>
+                                        <input type="text" name="company" id="contact-company" placeholder="Ejemplo Empresa" class="rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" required />
+                                    </div>
+                                </div>
+                                <!-- Grupo de Formulario -->
+                                <!-- Grupo de Formulario -->
                                 <div class="grid grid-cols-1 gap-6">
-                                    <!-- Form Single Input -->
+                                    <!-- Entrada de Formulario Individual -->
                                     <div class="flex flex-col gap-y-[10px]">
-                                        <label for="contact-message" class="text-lg font-bold leading-[1.6]">Message</label>
-                                        <textarea name="contact-message" id="contact-message" class="min-h-[180px] rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" placeholder="Write your message here..." required>
-                                            </textarea>
+                                        <label for="contact-message" class="text-lg font-bold leading-[1.6]">Mensaje</label>
+                                        <textarea name="mensaje" id="contact-message" class="min-h-[180px] rounded-[10px] border border-gray-300 bg-white px-6 py-[18px] font-bold text-black outline-none transition-all placeholder:text-slate-500 focus:border-colorOrangyRed" placeholder="Escribe tu mensaje aquí..." required></textarea>
                                     </div>
-                                    <!-- Form Single Input -->
                                 </div>
+                                <!-- Grupo de Formulario -->
 
                                 <div>
                                     <button type="submit" class="button mt-5 rounded-[50px] border-2 border-black bg-black py-4 text-white after:bg-colorOrangyRed hover:border-colorOrangyRed hover:text-white">
-                                        Send your message
+                                        Enviar tu mensaje
                                     </button>
                                 </div>
-                                <!-- Form Group -->
+                                <!-- Grupo de Formulario -->
                             </form>
+
                             <!-- Contact Form -->
                         </div>
                         <!-- Contact Right Block -->
