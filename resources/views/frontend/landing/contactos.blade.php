@@ -94,7 +94,8 @@
             <!-- Section Spacer -->
         </section>
         <!--...::: Breadcrumb Section End :::... -->
-<br><hr><br>
+        <br>
+        <hr><br>
         <!--...::: Contact Section Start :::... -->
         <section class="contact-section">
             <!-- Section Spacer -->
@@ -107,14 +108,14 @@
                             <!-- Section Content Block -->
                             <div class="mb-8 text-left lg:mb-16 xl:mb-6">
                                 <div class="mx-auto md:mx-0 md:max-w-none">
-                                    <h2>Get in touch with us directly</h2>
+                                    <h2>Ponte en contacto con nosotros</h2>
                                 </div>
                             </div>
                             <!-- Section Content Block -->
                             <div class="text-lg leading-[1.4] lg:text-[21px]">
                                 <p class="mb-7 last:mb-0">
-                                    We are here to help you! Tell us how we can help & we'll
-                                    be in touch with an expert within the next 24 hours.
+                                    ¡Estamos aquí para ayudarte! Díganos cómo podemos ayudarlo
+                                    y nos comunicaremos con un experto dentro de las próximas 24 horas.
                                 </p>
 
                                 <ul class="mt-12 flex flex-col gap-y-8 lg:gap-y-12">
@@ -229,7 +230,7 @@
         </section>
         <!--...::: Contact Section End :::... -->
 
-      
+
         <!--...::: Map Section Start :::... -->
     </main>
 </div>

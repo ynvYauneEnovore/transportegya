@@ -18,7 +18,7 @@
                         <iconify-icon class="text-slate-800 dark:text-white text-xl" icon="mdi:paint-outline"></iconify-icon>
                     </button>
                 </div>
-                <div class="md:block hidden w-full">
+                <div class="md:block w-full">
                     <button class="text-slate-800 dark:text-white focus:ring-0 focus:outline-none font-medium rounded-lg text-sm text-center inline-flex items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="lg:h-8 lg:w-8 h-7 w-7 rounded-full flex-1 ltr:mr-[10px] rtl:ml-[10px]">
                             <img src="/{{ auth()->user()->avatar }}" alt="user" class="block w-full h-full object-cover rounded-full">
