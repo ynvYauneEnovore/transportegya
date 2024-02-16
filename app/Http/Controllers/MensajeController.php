@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 class MensajeController extends Controller
 {
     public function index(){
-        return view('admin.mensaje.index');
+    
+        $mensajes = Mensaje::get();
+
+        return view('admin.mensaje.index', compact('mensajes'));
     }
 
     public function store(Request $request)
