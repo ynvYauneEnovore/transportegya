@@ -1,5 +1,5 @@
 <div class="sidebar-wrapper group">
-    
+
     <div id="bodyOverlay" class="w-screen h-screen fixed top-0 bg-slate-900 bg-opacity-50 backdrop-blur-sm z-10 hidden"></div>
     <div class="logo-segment">
         <a class="flex items-center" href="{{ route('backend.admin.index') }}">
@@ -83,13 +83,6 @@
                     </span>
                 </a>
             </li>
-              <li class="">
-                <a href="{{ route('backend.empresa.index') }}" class="navItem {{ (\Request::route()->getName() == 'backend.empresa.index') ? 'active' : '' }}">
-                    <span class="flex items-center">
-                        <iconify-icon class="nav-icon" icon="streamline:business-profession-home-office"></iconify-icon>
-                        <span>Empresa</span>
-                    </span>
-                </a>
-            </li>
+           
     </div>
 </div>
